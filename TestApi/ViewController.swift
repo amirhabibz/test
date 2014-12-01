@@ -36,10 +36,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         Alamofire.request(.GET, "https://www.talentell.com/api/imagesearch")
             .responseJSON { (_, _, JSON, _) in
-                println(JSON)
+                //println(JSON)
+                
+                let JSON2 = JSON as? [String : AnyObject]
+                let images = Mapper().map(JSON2 as [String:AnyObject]!, toType: Images.self)
+                println(images.items)
+                println(images.count)
+                
                 
                 // var string = "" + JSON
-                let user = Mapper().map(string: JSON as String, toType: Images.self)
+                //let user = Mapper().map(string: JSON as String, toType: Images.self)
                 
                 
                 

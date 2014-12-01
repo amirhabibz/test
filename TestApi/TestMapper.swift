@@ -14,7 +14,7 @@ import ObjectMapper
 class Images: MapperProtocol {
     
     var items: String?
-//    var count: String?
+   var count: String?
 //    var type: String?
 //    var scope: String?
 //    var query: String?
@@ -28,7 +28,7 @@ class Images: MapperProtocol {
     // MapperProtocol
     func map(mapper: Mapper) {
         items <= mapper["items"]
-//        count <= mapper["count"]
+       count <= mapper["count"]
 //        type <= mapper["type"]
 //        scope <= mapper["scope"]
 //        query <= mapper["query"]
